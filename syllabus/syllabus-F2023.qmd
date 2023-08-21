@@ -74,6 +74,7 @@ Given that there will be a number of topics we will not cover in class, the fina
 
 ### Examples of final projects
 
+- Write a textbook "chapter" on a topic we did not cover in class (eg. weak lensing).
 - Reproducing a result from the literature, possibly extending/exploring it further, and explaining it in detail.
 - Writing a code to compute the ionization history/BBN, including effects that we might have ignored in class, and explaining these.
 - Analyzing a public simulation dataset, calculating an observable of interest.
