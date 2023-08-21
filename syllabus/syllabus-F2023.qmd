@@ -1,0 +1,110 @@
+---
+title: "Physics 600 : Cosmology"
+author: "Nikhil Padmanabhan"
+date: last-modified
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+# Class Coordinates
+
+- Instructor : Nikhil Padmanabhan, nikhil.padmanabhan@yale.edu
+- TA: Navya Uberoi, navya.uberoi@yale.edu
+- KT 221, MW 11:35-12:50
+- Instructor Office hours: T 1-2pm or by appointment; KT #449
+
+# Overview
+
+My aim in this class is to give you an introduction to modern cosmology, giving you the background
+necessary to get into research in the field. Given the limited time and the breadth of the subject, this 
+will necessarily only be introductory with many interesting topics left out. I am also going to assume this 
+is a first course in cosmology, so I will not assume any prior knowledge of the subject.
+
+A brief outline of the topics I hope/plan to cover are:
+
+- Homogeneous expansion, distance measures
+- Thermodynamics - big bang nucleosynthesis, recombination, and dark matter freeze-out
+- Perturbations - A Newtonian treatment of linear perturbations, statistical description of perturbations
+- Perturbations (if time permits) - Relativistic treatment of linear perturbations, CMB anisotropies 
+- Inflation 
+- Possible advanced topics (if time permits)
+
+# Prerequisites
+
+Cosmology is a broad subject, and draws from many areas of physics, making writing up a exact list of prerequisites tricky. I will assume that you have taken courses in the usual core physics curriculum (mechanics, E&M and statistical mechanics). There will be times when I might need to refer to material from quantum mechanics, but that won't be too often, and it should be possible to follow/catch up on any such material. I will also assume that you are comfortable with the related mathematical techniques (linear algebra, differential equations, Fourier transforms etc).
+
+Cosmology is vary naturally tightly associated with general relativity. However, many modern cosmology problems do not require detailed use of GR. I will therefore not assume any prior GR knowledge (beyond the basic concept of a metric, which I will review). As a result of this, there might be places in the class (especially early on) where I do not give a fully rigorous treatment of a topic. I will flag these, and am happy to point you to more detailed references if you are interested.
+
+I will assume that you have basic numerical/coding skills (Mathematica, Python, Julia etc). You should be comfortable with making plots. 
+
+Finally, this is a graduate-level course, and will be paced accordingly. That said, the class should be perfectly accessible to advanced undergraduates with the appropriate background.
+
+
+# Resources
+
+## Textbooks
+
+I will draw from two primary textbooks for this class:
+
+- *A Course in Cosmology* by Dragan Huterer
+- *Cosmology* by Daniel Baumann
+
+There are many other excellent textbooks, not to mention review articles etc. As we go along, I will keep a running bibliography.
+
+## Lectures
+
+The class will largely follow a traditional lecture format. I will aim to post lecture notes, although these may vary from fully developed to outlines.
+
+# Homework and Final Projects
+
+## Homework
+
+There will be homework sets posted roughly every two weeks, that will be due approximately two weeks later. The exact cadence will vary somewhat throughout the semester. These will be a mix of pen-and-paper problems as well as problems that will require you to run code, make plots. Often, these might also require you to fill in details of derivations we outlined in class.
+
+## Final Projects
+
+Given that there will be a number of topics we will not cover in class, the final project is an opportunity for you to explore one of these topics in detail. There are some examples of possible projects below, but you are free to suggest your own ideas. 
+
+### Examples of final projects
+
+- Reproducing a result from the literature, possibly extending/exploring it further, and explaining it in detail.
+- Writing a code to compute the ionization history/BBN, including effects that we might have ignored in class, and explaining these.
+- Analyzing a public simulation dataset, calculating an observable of interest.
+- Writing a code to compute the CMB power spectrum, and exploring the effects of different parameters.
+
+### Guidelines for final projects
+
+1. The final project is an individual project. You are welcome to discuss ideas with your classmates, group members, the TA or me. However, the final writeup or any code you submit must be your own work. If you have questions about what is acceptable, please ask.
+2. Your final submission should be a ~5-10 page writeup, as well as the code/data to make fully reproduce the results. You are welcome to use any language you are comfortable with. You should create a Github repository for this project.
+3. As part of grading your final project, I will schedule a 15 minute meeting with you to discuss your project. This will be an opportunity for you to explain your project, and for me to ask you questions about it.
+4. The final project will be graded on the following : (1/4) motivation, and background, (1/4) results, (1/4) clarity of presentation, and (1/4) based on our discussion.
+
+### Timeline for final projects
+
+- Oct 23 : Proposals for the project due.
+- Dec 1 : Draft results, plots due. This will let me start scheduling meetings to discuss these projects
+- Dec 10 (TBC) : Final writeup due.
+
+## Overall Grades
+
+The final grade will be determined with equal weight given to the final project and HW. 
+
+# Academic Integrity
+
+This is a class designed to get you thinking about research in cosmology, so I encourage you to use a broad range of resources (including other textbooks, Mathematica etc) when working on homework and the final project. You are also encouraged to discuss problems with classmates.
+
+However, you must cite any resources you use, and you must write up your solutions in your own words. 
+
+## My Acknowledgements
+
+This is a good place to acknowledge my debt to many sources for this class. A large portion of this class will follow the two textbooks and in many, many cases, my presentation and problem sets will directly borrow from them. Citing these sources as I proceed would be quickly tedious, but I will try to point to the relevant sections in the textbooks as we go along.
+
+In cases where I borrow an argument from a different source, I will add this both to the bibliography and class notes.
+
