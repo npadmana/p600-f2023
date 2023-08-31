@@ -1,0 +1,44 @@
+---
+title: "Physics 600 : Cosmology : Lecture 1"
+author: "Nikhil Padmanabhan"
+date: last-modified
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+
+# Preliminaries
+
+## Homogeneity and Isotropy
+
+- Homogeneity : looks the same at all points
+- Isotropy : looks the same in all directions
+
+This is clearly an approximation, but appears to be a good one when one considers large scales.
+
+### What does isotropy imply?
+
+(Arguments here are from Peacock)
+
+First, let us consider local isotropy about some point $O$. Consider a velocity field and 
+imagine expanding that vector field about the point $O$. Note that the velocity at $O$ must vanish
+by isotropy.
+
+Consider the velocity gradient tensor $\Sigma = \partial v_i/\partial x_j$. Imposing isotropy, there is only one rank-2 tensor
+(in 3 and higher dimensions) that is invariant under rotations (up to scaling). This is the Kronecker delta $\delta_{ij}$, 
+or the identity matrix.
+
+The general Taylor expansion of the velocity field would look like
+$$
+{\mathbf v} = \Sigma {\mathbf r}
+$$
+
+
+
