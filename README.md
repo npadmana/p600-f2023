@@ -22,3 +22,5 @@ An incomplete bibliography/reference list is below, apologies for sources missed
 - Cosmological Physics, Peacock
 
 ## Papers
+
+[Distance Measures in Cosmology, Hogg](https://arxiv.org/pdf/astro-ph/9905116.pdf)
