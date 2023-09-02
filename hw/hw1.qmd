@@ -1,0 +1,35 @@
+---
+title: "PHYS 600 : HW 1"
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+This HW is just to warm up on numerics and plotting. 
+
+You should add any code you write, and the plots you generate into your Github
+repository for this class. 
+
+## Problem 1
+
+Consider the integral 
+$$
+\int_0^z \frac{dz}{\left[\Omega (1+z)^3 + (1-\Omega) (1+z)^{3/2}\right]^{1/2}}
+$$
+where $\Omega$ is a parameter between 0 and 1. Note that this integral defines a function 
+of $z$.
+
+Write code to numerically integrate this integral for a given value of $\Omega$ and $z$.
+Plot the result as a function of $z$ (between $0<z<1$) for $\Omega=0, 0.3, 0.7, 1$.
+Make sure to label the axes of your plot.
+
+Also include on your plot the analytic results for $\Omega=0$ and $\Omega=1$.
+
+You can use any approach to integrate the function that you like (i.e. you do not 
+need to write the integration routine from scratch). 
