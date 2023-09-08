@@ -1,0 +1,31 @@
+---
+title: "PHYS 600 : HW 2"
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+## A Closed Universe
+
+
+## Friedmann Equation II
+
+I mentioned in class that the second Friedmann equation 
+can be derived from the first Friedmann equation and the continuity equation.
+Work out the details of this derivation.
+
+
+## Cosmological Dimming
+
+
+## Magnitudes and K-corrections
+
+
+
+## A Static Universe
