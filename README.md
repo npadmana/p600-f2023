@@ -23,4 +23,6 @@ An incomplete bibliography/reference list is below, apologies for sources missed
 
 ## Papers
 
+### Background Expansion
+
 [Distance Measures in Cosmology, Hogg](https://arxiv.org/pdf/astro-ph/9905116.pdf)
