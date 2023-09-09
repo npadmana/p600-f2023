@@ -25,4 +25,9 @@ An incomplete bibliography/reference list is below, apologies for sources missed
 
 ### Background Expansion
 
-[Distance Measures in Cosmology, Hogg](https://arxiv.org/pdf/astro-ph/9905116.pdf)
+- [The Friedmann Models and Optical Observations in Cosmology, Gunn](https://ui.adsabs.harvard.edu/abs/1978obco.meet....1G/abstract) : This 
+set of lecture notes from 1978 are worth perusing. A lot of what we discussed in the first lecture are in the first few pages here (although
+this is not where I got them from)
+- [Distance Measures in Cosmology, Hogg](https://arxiv.org/pdf/astro-ph/9905116.pdf)
+- [The K-Correction, Hogg et al](https://arxiv.org/abs/astro-ph/0210394)
+- [Expanding Confusion..., Davis and Lineweaver](https://arxiv.org/pdf/astro-ph/0310808.pdf)
