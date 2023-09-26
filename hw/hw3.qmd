@@ -1,0 +1,78 @@
+---
+title: "PHYS 600 : HW 3"
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+## 1. Reviewing the Background
+
+The following are meant to be short problems, just to review key parts of the homogeneous expansion of the Universe. If not specified, assume a cosmology with $\Omega_{m,0}=0.3$, $\Omega_{\Lambda}=0.7$ and $h=0.7$. 
+
+### Density Parameters
+
+Calculate $\Omega_{m}$ and $\Omega_{\Lambda}$ at $z=0.5$.
+
+### Luminosity and Angular Diameter distances
+
+Make a plot of the luminosity and angular diameter distances as a function of redshift to $z=10$. 
+Compare these (on the same plot) to the luminosity/angular diameter distance for an $\Omega_{m,0}=1$ universe.
+
+Make sure to label your axes. Comment on the non-monotonicity of the angular diameter distance. 
+### Looking Back
+
+At the colloquium last week, the speaker mentioned that a redshift of 2-3 roughly corresponds to 10 billion years ago. Find the redshift that is 10 billion years ago (three significant figures only).
+
+### A $\Lambda$-dominated Universe
+
+Consider a Universe with only a cosmological constant. Find $a(t)$. What is the age of such a Universe?
+
+
+## 2. Massive Neutrinos
+
+(This is based on a problem from Baumann.)
+
+Our current understanding of neutrino physics suggests that atleast two of the three neutrino species have a non-zero (although small) mass. Let us work out the cosmological implications of this.
+
+- Assuming that the neutrinos are relativistic at decoupling, show that the energy density at decoupling is given by
+$$
+\rho_{\nu} = \frac{T_{\nu}^{4}}{\pi^{2}} \int  \, d\xi \frac{\xi^{2} \sqrt{ \xi^{2} + m_{\nu}^{2}/T_{v}^{2} }}{e^{\xi} + 1} 
+$$
+where $T_{\nu}$ is the neutrino temperature.
+
+- Consider a series expansion for small $m_{\nu}/T_{\nu}$ and show that 
+$$
+\rho_{\nu} \approx \rho_{\nu,0} \left( 1 + \frac{5}{7\pi^2} \frac{m_{\nu}^{2}}{T_{\nu}^{2}}\right) 
+$$
+where $\rho_{\nu,0}$ is the energy density of massless neutrinos.
+
+- If $\rho_{v}$ is "significantly" larger than $\rho_{v,0}$ at the epoch of the CMB ($z \sim1000$), then the neutrinos can affect the CMB. Estimate the smallest neutrino mass detectable in the CMB. Feel free to make assumptions to do this, but explicitly describe these. You may assume that the CMB temperature today is 0.235 meV.
+
+- Assume that one of the neutrino species has a mass of $m_{\nu}$. Estimate the redshift at which the neutrinos go non-relativistic.
+- Estimate the number density of neutrinos today. To do so, you can't just use the non-relativistic integrals from class, since the neutrinos are not in thermal equilibrium anymore. Instead, calculate the number density at neutrino decoupling, and then dilute the density with the expansion of the Universe.
+- Show that these neutrinos have a energy density today of 
+$$
+\Omega_{\nu,0} h^2 \approx \frac{m_{\nu}}{94 \,\mathrm{eV}}
+$$
+
+
+## 3. Measuring the Expansion History with Standard Candles
+
+You are encouraged to use Mathematica or something similar to simplify/assist with the algebra in this problem, if you want. If/when you need to, assume the standard values of the cosmological parameters from the first problem.
+
+Suppose that the standard candle method directly measures the radial comoving distance 
+$$
+\chi = \int  \, dz \frac{c}{H_{0} \left[ \Omega_{m,0} (1+z)^{3} + \Omega_{\Lambda,0} + (1-\Omega_{m,0} - \Omega_{\Lambda,0}) \right (1+z)^2]^{1/2} } 
+$$
+
+- Develop a series expansion of $\chi$ as a function of $z$ expanding about $z=0$. Work to order $z^3$ (i.e. include those terms).
+- To what redshift is this expansion accurate to 10%?
+- Explain the following statement - for very low redshift measurements, the only parameter that can be measured is $H_0$. 
+- As you increase the redshift reach (still low redshifts), you gain sensitivity to the other cosmological parameters. However, it turns out that you are largely sensitive to a combination of $\Omega_{m,0}$ and $\Omega_{\Lambda,0}$, and not both individually. What combination and why?
+- Consider a survey that measures $\chi$ to 1% at $z=0.01, 0.1, 0.2, 0.3$. Forecast the errors on $H_0$, $\Omega_{m,0}$ and $\Omega_{\Lambda,0}$.
