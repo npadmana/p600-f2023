@@ -13,7 +13,7 @@ execute:
 
 ## 1. Reviewing the Background
 
-The following are meant to be short problems, just to review key parts of the homogeneous expansion of the Universe. If not specified, assume a cosmology with $\Omega_{m,0}=0.3$, $\Omega_{\Lambda}=0.7$ and $h=0.7$. 
+The following are meant to be short problems, just to review key parts of the homogeneous expansion of the Universe. If not specified, assume a cosmology with $\Omega_{m,0}=0.3$, $\Omega_{\Lambda,0}=0.7$ and $h=0.7$. 
 
 ### Density Parameters
 
@@ -25,6 +25,7 @@ Make a plot of the luminosity and angular diameter distances as a function of re
 Compare these (on the same plot) to the luminosity/angular diameter distance for an $\Omega_{m,0}=1$ universe.
 
 Make sure to label your axes. Comment on the non-monotonicity of the angular diameter distance. 
+
 ### Looking Back
 
 At the colloquium last week, the speaker mentioned that a redshift of 2-3 roughly corresponds to 10 billion years ago. Find the redshift that is 10 billion years ago (three significant figures only).
