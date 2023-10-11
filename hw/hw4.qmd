@@ -1,0 +1,49 @@
+---
+title: "PHYS 600 : HW 4"
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+## Recombination
+
+The Saha equation for the ionization fraction $X_{e}$ is given by
+$$
+\left( \frac{1-X_{e}}{X_{e}^{2}} \right) = \frac{2 \zeta(3)}{\pi^{2}}
+  \eta \left( \frac{2 \pi T}{m_{e}} \right)^{3/2} e^{E_{I}/T} 
+$$
+where $\eta$ is the baryon-to-photon number ratio, $E_{I}$ is the ionization energy of hydrogen and $T$ is the photon temperature.
+
+1. Derive this equation (You will probably want to follow your class notes/Baumann here).
+2. Solve this equation for $X_e$ as a function of $z$, and make a plot of this.
+3. From your figure, determine the redshift at which $X_{e}=0.1$. How different is this from the redshift at which $X_{e}=0.5$?
+4. Calculate the age of the Universe at this epoch (assume a matter dominated Universe).
+5. Now, using this ionization fraction, estimate the decoupling redshift at which the Thomson scattering rate equals the Hubble rate. Again, estimate the age of the Universe at this epoch? What is the ionization fraction at this epoch?
+
+
+## "What-if" BBN
+
+Define the neutron fraction as
+$$
+X_{n} \equiv \frac{n_{n}}{n_{n}+n_{p}}
+$$
+
+- Derive the equilibrium abundance
+$$
+X_{n} = \frac{e^{-Q/T}}{1+e^{-Q/T}}
+$$
+where $Q=m_{n}-m_{p}=1.3\,\mathrm{MeV}$.
+
+- Assuming the "freezeout" temperature is 0.8 MeV, estimate the freeze out abundance of neutrons ($X_{e}$).
+- Assuming that all of these neutrons are converted to helium-4, calculate the mass fraction of helium $Y_{P}=4 n_{He}/n_{H}$.
+- Suppose that the mass difference between neutrons and protons was actually 2.6 MeV, but the freeze out temperature remains the same (since the former comes from strong nuclear forces, while the latter is set by weak interactions). What would the impact be on the helium abundance (assuming all else is unchanged)?
+
+## Freeze-in DM
+
+Work through Problem 6.4 of Huterer (a version of this is uploaded onto Canvas).
