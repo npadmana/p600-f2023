@@ -1,0 +1,126 @@
+---
+title: "PHYS 600 : HW 5"
+date-format: iso
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    html-math-method: mathjax
+execute: 
+  cache: true
+---
+
+## Growth of Matter Perturbations - Matter and Radiation
+
+The equation for the growth of a matter perturbation in linear theory 
+above the Jean's scale is given by 
+$$
+\ddot{\delta}_m + 2 H \dot{\delta}_m = 4 \pi G \bar{\rho}_m \delta_m  \,.
+$$
+In what follows, we will assume that the Universe is only made of matter 
+and radiation, and is flat. Furthermore, we will ignore any fluctuations in the 
+radiation, although it will contribute to the expansion rate ($H$).
+
+- Show that this above evolution equation can be written as
+$$
+\frac{d}{da} \left( a^3 H \frac{d \delta_m}{da} \right) = 4 \pi G \bar{\rho}_{m,0} \frac{\delta_m}{H a^2} \,.
+$$
+- Define $y = a/a_{eq}$, where $a_{eq}$ is the scale factor at matter-radiation equality. Show that the Hubble parameter can be written as
+$$
+H(y) = \frac{A}{y^2} \sqrt{1 + y} \,.
+$$ 
+Work out $A$ in terms of physical constants and the energy density at equality.
+- Substitute this into the equation for growth and show that it can be written as 
+$$
+\frac{d^2 \delta_m}{dy^2} + \frac{2 + 3y}{2y(1+y)} \frac{d \delta_m}{dy} = \frac{3}{2} \frac{\delta_m}{y (1+y)} \,.
+$$
+- Verify (by eg. direct substitution, you may use Mathematica) that the solutions to this equation are 
+$$
+\delta_m \propto 1 + \frac{3}{2} y
+$$
+and 
+$$
+\delta_m \propto \left(1 + \frac{3}{2} y\right) \ln 
+  \left(\frac{\sqrt{1+y}+1}{\sqrt{1+y}-1}\right) - 3 \sqrt{1+y} \,.
+$$
+- Check to see that the growing modes at early and late times match your expectation (for radiation and matter domination respectively).
+
+## Spherical Collapse
+
+In class, we used the following parametric solution for a spherical overdensity 
+of mass $M$ and energy $E$ :
+$$
+r(\theta) = A (1 - \cos \theta)
+$$
+and 
+$$
+t(\theta) = B (\theta - \sin \theta)
+$$
+with 
+$$
+A = \frac{G M}{2|E|}
+$$ 
+and $A^3 = G M B^2$.
+Verify (either by solving or substituting) this solution.
+
+## Equality Scale
+
+As we saw in class, the equality scale sets the turnover in the matter power
+spectrum. Show that the equality scale is given by
+$$
+k_{eq} = a_{eq} H_{eq} = H_0 \sqrt{\frac{2 \Omega_M}{a_{eq}}} \,.
+$$
+Estimate this scale for a cosmology roughly like the one we live in. 
+
+## A Study in Simulations
+
+(coming soon...)
+
+This problem has you explore the results of an N-body simulation, and compare it to the
+various aspects of the class so far. For this, we will use one of the Quijote simulations
+\texttt{https://quijote-simulations.readthedocs.io/en/latest/}. 
+
+We will use the fiducial cosmology, which is a flat $\Lambda$CDM cosmology with
+$\Omega_M = 0.3175$, $\Omega_b = 0.049$, $h = 0.6711$, $n_s = 0.9624$, and $\sigma_8 = 0.834$.
+
+On Canvas (and our Github repository), you will find a directory with the following data. All of 
+these are simple text files. There is a header with the column information as well.
+
+- `linear_pk.txt` : The linear theory power spectrum at $z=0$.
+- `pk_z=<z>.txt` : The non-linear power spectrum at different redshifts ($z=0$, $z=0.5$, $z=1$ and $z=2$)
+- `halo_z=<z>.txt` : The halos in the simulation at different redshifts ($z=0$, and $z=1$)
+
+
+### Orienting Yourself : The Linear Power Spectrum
+
+- Start by making a plot of the linear power spectrum at $z=0$. You should plot 
+these on log scales on both axes. 
+- Verify that at large scales (low $k$), the power spectrum is given by 
+$$
+P(k) \propto k^{n_s}
+$$
+which is the primordial power spectrum (since $T(k)=1$ at large scales). 
+Note the slight deviation from the Harrison-Zel'dovich spectrum ($n_s=1$).
+- Estimate $k_{eq}$ from the plot. Compare this to your expectation (see 
+  previous problem).
+- Compute the transfer function $T(k)$ and plot it. Normalize it to $1$ at 
+  large scales. Compare the shape at large $k$ (small scales) to 
+  what we calculated in class.
+- Calculate $\sigma_8$ from the linear power spectrum. Compare this to the value 
+  given above.
+
+### Non-linear Power Spectrum and Structure Growth
+
+- Plot the power spectrum from the simulation at the redshifts given (again on 
+  log scales). Compare this to the linear power spectrum.
+- Now plot the ratio of the non-linear to linear power spectrum. Explain the shape 
+  of this ratio on large scales based on what you know about linear structure growth.
+  At what $k$ does linear structure growth start to break down (should be redshift
+  dependent)?
+- From this plot, extract the growth function as a function of redshift. How are you 
+  choosing to normalize this?
+- Calculate the growth function for the cosmology of the simulation, and compare to 
+  your extracted growth function. How well do they agree?
+
+### Halo Mass Function
