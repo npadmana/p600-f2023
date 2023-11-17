@@ -11,7 +11,7 @@ execute:
   cache: true
 ---
 
-## Growth of Matter Perturbations - Matter and Radiation
+## I : Growth of Matter Perturbations - Matter and Radiation
 
 The equation for the growth of a matter perturbation in linear theory 
 above the Jean's scale is given by 
@@ -46,7 +46,7 @@ $$
 $$
 - Check to see that the growing modes at early and late times match your expectation (for radiation and matter domination respectively).
 
-## Spherical Collapse
+## II: Spherical Collapse
 
 In class, we used the following parametric solution for a spherical overdensity 
 of mass $M$ and energy $E$ :
@@ -64,7 +64,7 @@ $$
 and $A^3 = G M B^2$.
 Verify (either by solving or substituting) this solution.
 
-## Equality Scale
+## III: Equality Scale
 
 As we saw in class, the equality scale sets the turnover in the matter power
 spectrum. Show that the equality scale is given by
@@ -73,9 +73,7 @@ k_{eq} = a_{eq} H_{eq} = H_0 \sqrt{\frac{2 \Omega_M}{a_{eq}}} \,.
 $$
 Estimate this scale for a cosmology roughly like the one we live in. 
 
-## A Study in Simulations
-
-(coming soon...)
+## IV: A Study in Simulations
 
 This problem has you explore the results of an N-body simulation, and compare it to the
 various aspects of the class so far. For this, we will use one of the Quijote simulations
@@ -88,8 +86,10 @@ On Canvas (and our Github repository), you will find a directory with the follow
 these are simple text files. There is a header with the column information as well.
 
 - `linear_pk.txt` : The linear theory power spectrum at $z=0$.
-- `pk_z=<z>.txt` : The non-linear power spectrum at different redshifts ($z=0$, $z=0.5$, $z=1$ and $z=2$)
-- `halo_z=<z>.txt` : The halos in the simulation at different redshifts ($z=0$, and $z=1$)
+- `Pk_m_z=<z>.txt` : The non-linear power spectrum at different redshifts ($z=0$, $z=0.5$, $z=1$ and $z=2$)
+  The columns here are $k$ and $P(k)$, just as in the linear power spectrum.
+- `halo_z=<z>.txt` : The halos in the simulation at different redshifts ($z=0$, and $z=1$). This is 
+  just a list of halo masses, including a virial mass estimate, as well as 200b and 200c estimates.
 
 
 ### Orienting Yourself : The Linear Power Spectrum
@@ -104,9 +104,8 @@ which is the primordial power spectrum (since $T(k)=1$ at large scales).
 Note the slight deviation from the Harrison-Zel'dovich spectrum ($n_s=1$).
 - Estimate $k_{eq}$ from the plot. Compare this to your expectation (see 
   previous problem).
-- Compute the transfer function $T(k)$ and plot it. Normalize it to $1$ at 
-  large scales. Compare the shape at large $k$ (small scales) to 
-  what we calculated in class.
+- Compute the transfer function $T(k)$ from the power spectrum and plot it. Normalize it to $1$ at 
+  large scales. Compare the shape to what we calculated in class.
 - Calculate $\sigma_8$ from the linear power spectrum. Compare this to the value 
   given above.
 
@@ -120,7 +119,48 @@ Note the slight deviation from the Harrison-Zel'dovich spectrum ($n_s=1$).
   dependent)?
 - From this plot, extract the growth function as a function of redshift. How are you 
   choosing to normalize this?
-- Calculate the growth function for the cosmology of the simulation, and compare to 
+- Calculate the growth function for the cosmology of the simulation, using the method 
+  below. Compare this to 
   your extracted growth function. How well do they agree?
 
+### Computing the Growth Function
+
+Start by defining $g(a)$ as 
+$$
+D(a) \equiv g(a) a
+$$
+where $D(a)$ is the linear growth function. Note that for a matter dominated Universe, 
+$D(a) = a$, and so $g(a) = 1$. 
+Define primes as derivatives with respect to $\ln a$. Then you can show (but you do not
+have to) that $g(a)$ satisfies the following equation (eg. Linder 2005)
+$$
+g'' + \left(\frac{5}{2} - \frac{3}{2} w(a) \Omega_{DE}(a)\right) g' - \frac{3}{2} (1-w(a)) \Omega_{DE}(a) g = 0 \,.
+$$
+where $w(a)$ is the equation of state of dark energy, and $\Omega_{DE}(a)$ is the fraction of the total energy density in dark energy.
+Note that the quantity that appears in the equation is $\Omega_{DE}(a)$, i.e. the redshift dependent quantity.
+
+This equation is quite general, and works for many different cosmologies with varying dark energy. Note that many of the other approximations
+you may find in the literature do not. 
+
+For the cosmology of the simulation, $w(a) = -1$, so the equation simplifies considerably. Finally, remember to multiply by $a$ to get the growth rate.
+
+In order to determine the growth rate for the previous problem, integrate this equation from some very early time (remember that you are integrating in $\ln a$);
+eg. $\ln a = -5.0$. At this time you may assume that the Universe is matter dominated, and so $g(a) = 1$, which you can use to set the initial conditions.
+Then integrate forward. When you get to $a=1$, you should find that $g(a=1) \approx 0.78$.  
+
+
 ### Halo Mass Function
+
+The files you have include three different types of halo mass for each halo. You may use any of these, 
+and if you are interested, you could explore the differences between them. 
+
+- The simulation we are using has a box size of $1 h^{-1}$ Gpc, and has $1024^3$ particles. What is the
+  mass of each particle?
+- Read in the halos, and measure the halo mass function at $z=0$. Plot this on log-log scales. You will see 
+  a turnover at low masses. What do you think is causing this? How many particles are in halos at this mass?
+- Using the linear power spectrum, calculate $\sigma(M)$, where $M = (4/3) \pi R^3 \bar{\rho}_m$. Plot this 
+  quantity. 
+- Using this quantity, compute the Press-Schechter mass function. Plot this on the same plot as the halo mass 
+  function. How well do they agree?
+- Repeat this exercise at $z=1$. The only change you need to make to compute the Press-Schechter mass function 
+  at $z=1$ is to scale $\sigma(M)$ by $D(z)$.
